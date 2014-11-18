@@ -58,5 +58,6 @@
     <None Include="JASidePanels\JASidePanelController.m" />
     <None Include="JASidePanels\UIViewController+JASidePanel.h" />
     <None Include="JASidePanels\UIViewController+JASidePanel.m" />
+    <None Include="README.txt" />
   </ItemGroup>
 </Project>
