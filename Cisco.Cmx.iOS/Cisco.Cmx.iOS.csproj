@@ -36,6 +36,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="JASidePanels\" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
@@ -51,5 +52,11 @@
     <Compile Include="libCMX.linkwith.cs">
       <DependentUpon>libCMX.a</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JASidePanels\JASidePanelController.h" />
+    <None Include="JASidePanels\JASidePanelController.m" />
+    <None Include="JASidePanels\UIViewController+JASidePanel.h" />
+    <None Include="JASidePanels\UIViewController+JASidePanel.m" />
   </ItemGroup>
 </Project>

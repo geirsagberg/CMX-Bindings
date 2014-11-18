@@ -100,5 +100,11 @@ namespace Cisco.Cmx.iOS
         [Export("floorId")]
         string FloorId { get; }
     }
+
+    [BaseType(typeof(NSObject))]
+    interface JASidePanelController
+    {
+
+    }
 }
 
