@@ -13,7 +13,7 @@ namespace Cisco.Cmx.iOS
     // that you want to bind.
     //
     // When you do that, you'll notice that MonoDevelop generates a code-behind file for each
-    // native library which will contain a [LinkWith] attribute. Visual Studio auto-detects the
+    // native library which will contain a [LinkWith] attribute. MonoDevelop auto-detects the
     // architectures that the native library supports and fills in that information for you,
     // however, it cannot auto-detect any Frameworks or other system libraries that the
     // native library may depend on, so you'll need to fill in that information yourself.
@@ -61,6 +61,44 @@ namespace Cisco.Cmx.iOS
     //     [Export ("initWithElmo:")]
     //     IntPtr Constructor (ElmoMuppet elmo);
     //
-    // For more information, see http://docs.xamarin.com/ios/advanced_topics/binding_objective-c_types
+    // For more information, see http://docs.xamarin.com/ios/advanced_topics/binding_objective-c_libraries
     //
+
+    [BaseType(typeof(NSObject))]
+    interface CMXClient
+    {
+        [Export("configuration", ArgumentSemantic.Copy)]
+        CMXClientConfiguration Configuration { get; set; }
+
+        [Export("clientLocation")]
+        CMXClientLocation ClientLocation { get; }
+
+        [Static]
+        [Export("instance")]
+        CMXClient Instance { get; }
+
+        [Export("isRegistered")]
+        bool IsRegistered { get; }
+
+        [Export("registerWithAppServerWithCompletion:failure:")]
+        void RegisterWithAppServer(Action completion, Action<NSError> failure);
+    }
+
+    [BaseType(typeof(NSObject))]
+    interface CMXClientConfiguration
+    {
+        [Export("serverURL")]
+        NSUrl ServerUrl { get; set; }
+    }
+
+    [BaseType(typeof(NSObject))]
+    interface CMXClientLocation
+    {
+        [Export("venueId")]
+        string VenueId { get; }
+
+        [Export("floorId")]
+        string FloorId { get; }
+    }
 }
+
