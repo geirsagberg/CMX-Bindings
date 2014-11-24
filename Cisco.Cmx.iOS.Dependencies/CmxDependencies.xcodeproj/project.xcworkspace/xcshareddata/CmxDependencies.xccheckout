@@ -16,7 +16,7 @@
 		<string>https://github.com/geirsagberg/CMX-Bindings</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CmxDependencies/CmxDependencies.xcodeproj</string>
+	<string>Cisco.Cmx.iOS.Dependencies/CmxDependencies.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>74CDB923F8B8650A843C606E503C22DC4125C4B0</key>
