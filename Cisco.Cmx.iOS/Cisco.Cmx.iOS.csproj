@@ -36,7 +36,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="JASidePanels\" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
@@ -47,17 +46,17 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
   <ItemGroup>
     <ObjcBindingNativeLibrary Include="libCMX.a" />
+    <ObjcBindingNativeLibrary Include="libCmxDependenciesUniversal.a" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="libCMX.linkwith.cs">
       <DependentUpon>libCMX.a</DependentUpon>
     </Compile>
+    <Compile Include="libCmxDependenciesUniversal.linkwith.cs">
+      <DependentUpon>libCmxDependenciesUniversal.a</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="JASidePanels\JASidePanelController.h" />
-    <None Include="JASidePanels\JASidePanelController.m" />
-    <None Include="JASidePanels\UIViewController+JASidePanel.h" />
-    <None Include="JASidePanels\UIViewController+JASidePanel.m" />
     <None Include="README.txt" />
   </ItemGroup>
 </Project>
